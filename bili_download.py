@@ -26,7 +26,7 @@ async def download_by_id(video_id, save_path):
                         if not chunk:
                             break
 
-                        process = len(chunk)
+                        process += len(chunk)
                         print(f'下载进度 {process} / {length}')
                         f.write(chunk)
 
@@ -40,7 +40,7 @@ async def download_by_id(video_id, save_path):
                         if not chunk:
                             break
 
-                        process = len(chunk)
+                        process += len(chunk)
                         print(f'下载进度 {process} / {length}')
                         f.write(chunk)
 
